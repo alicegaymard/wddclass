@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-body: 'Open Sans';
+    --font-heading: 'Poppins';
+    --Violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+    --white: #ffffff;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--white);
+    background-color: var(--Violet);
+    background-image: url("images/bg-desktop.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 50px;
+    gap: 20px;
+}
+
+.icon-image {
+    width: 100%;
+    max-width: 696px;
+    height: auto;
+    justify-self: center;
+}
+
+.main {
+    text-align: left;
+}
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.625;
+    margin-bottom: 20px;
+}
+
+button {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--Violet);
+    background-color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--soft-magenta);
+    color: var(--white);
+}
+
+footer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: end;
+    gap: 10px;
+    padding: 20px;
+    margin-top: auto; 
+}
+
+.social-icon {
+    color: var(--white);
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--Violet);
+    text-decoration: none;
+    padding: 1rem 1.4rem;
+    border: 2px solid var(--white);
+}
+
+.social-icon:hover {
+    background-color: var(--Violet);
+    color: var(--soft-magenta);
+    border: 2px solid var(--soft-magenta);
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url("images/bg-mobile.svg");
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+
+    .icons {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .icon-image {
+        justify-self: center;
+    }
+
+    .main {
+        justify-self: center;
+        text-align: center; 
+        padding: 0 15px; 
+    }
+
+    h1 {
+        text-align: center; 
+    }
+
+    p {
+        text-align: center; 
+        padding-bottom: 20px;
+    }
+
+    .logo {
+        width: 120px;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+
+    footer {
+        justify-content: center; 
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+    
+}
+
+
+
